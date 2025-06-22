@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¿Me perdonas, Luana?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #fff0f5;
+            background-image: url('https://i.pinimg.com/originals/39/8e/42/398e424308f2610a0d65220d28fba6f0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: rgba(255,255,255,0.85);
+            margin: 0 auto;
+            max-width: 90%;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-top: 60px;
+        }
+        .btn-love {
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: opacity 0.5s ease;
+        }
+        .mensaje {
+            margin-top: 30px;
+            display: none;
+            animation: aparecer 1s ease forwards;
+        }
+        .mensaje p {
+            color: #d63384;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .kitty-gif {
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+            margin: 10px;
+        }
+        @keyframes aparecer {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn-love" id="btnPerdon" onclick="mostrarMensaje()">Perdóname</button>
+
+        <div class="mensaje" id="mensaje">
+            <p>Perdóname, solo quiero estar bien contigo, te amo mucho.</p>
+            <img class="kitty-gif" src="https://media.giphy.com/media/dxUPQiFzSXCtWnM0z0/giphy.gif" alt="Hello Kitty gif">
+            <img class="kitty-gif" src="https://media.giphy.com/media/12HZukMBlutpoQ/giphy.gif" alt="Hello Kitty gif">
+        </div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            var btn = document.getElementById("btnPerdon");
+            var mensaje = document.getElementById("mensaje");
+            btn.style.display = "none";
+            mensaje.style.display = "block";
+        }
+    </script>
+</body>
+</html>
